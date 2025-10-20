@@ -1,82 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f8f8f8;
-    margin: 0;
-    padding: 0;
+/* === Hero Section === */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('../img/backround.png') center center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
 }
 
-header {
-    background: #3498db;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Overlay hitam transparan */
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
 }
 
-nav {
-    margin-top: 10px;
+/* Konten di atas overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }
 
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
+/* Navbar transparan di atas background */
+.navbar {
+  transition: background-color 0.4s ease;
+  z-index: 10;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* Warna navbar saat di-scroll */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
+/* Hover link navbar */
+.navbar-nav .nav-link:hover {
+  color: #dc3545 !important;
+  transition: color 0.3s ease;
 }
 
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Tombol merah */
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-danger:hover {
+  background-color: #b02a37;
+  transform: scale(1.05);
 }
 
-/* 🌐 Bagian Responsif */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
+/* === Responsif === */
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    nav a {
-        display: block;
-        padding: 8px;
-        background: #2980b9;
-        border-radius: 5px;
-    }
-
-    main {
-        padding: 10px;
-    }
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 20px;
-    }
+/* HP */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 90vh;
+  }
+  .hero-section h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+  .btn-danger {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .navbar-brand img {
+    width: 45px;
+  }
+}
+/* === Navbar ke kanan === */
+.navbar .navbar-collapse {
+  justify-content: flex-end !important;
+}
 
-    main h2 {
-        font-size: 18px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 6px;
-    }
+.navbar .navbar-nav {
+  margin-left: auto !important;
 }
