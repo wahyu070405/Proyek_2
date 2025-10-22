@@ -84,11 +84,3 @@
     width: 45px;
   }
 }
-/* === Navbar ke kanan === */
-.navbar .navbar-collapse {
-  justify-content: flex-end !important;
-}
-
-.navbar .navbar-nav {
-  margin-left: auto !important;
-}
