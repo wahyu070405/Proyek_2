@@ -1,0 +1,154 @@
+/* === NAVBAR === */
+.custom-navbar {
+  background: transparent
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+}
+
+.custom-navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ff5252 !important;
+}
+
+.brand-text {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('../img/backround.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+}
+
+/* === GALLERY === */
+.gallery-section {
+  background: url('../img/backround.png') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-section .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.gallery-section img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-section img:hover {
+  transform: scale(1.05);
+}
+
+/* === MEMBERSHIP SECTION === */
+.membership-section {
+  position: relative;
+  min-height: 100vh;
+  background: url('../img/backround.png') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.membership-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.membership-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card efek hover */
+.price-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .membership-section {
+    padding: 3rem 1rem;
+    background-attachment: scroll;
+  }
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 45px;
+  }
+
+  .gallery-section img {
+    height: 200px;
+  }
+
+  .price-card h2 {
+    font-size: 1.5rem;
+  }
+}

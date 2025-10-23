@@ -1,16 +1,12 @@
-@extends('layout.main')
-
-@section('title', 'Home')
+@extends('layouts.main')
 
 @section('content')
-<section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+<section class="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center">
   <div class="overlay"></div>
-  <div class="container position-relative px-3">
-    <h1 class="display-4 fw-bold">Badak R-One Gym in Indramayu</h1>
-    <p class="lead mb-4 fst-italic">Max out your bench, squat, and deadlift in our gym</p>
-    <a href="{{ url('/membership') }}" class="btn btn-danger btn-lg rounded-pill px-4">
-      Join Our Membership Now!
-    </a>
+  <div class="content container px-3">
+      <h1 class="display-5 fw-bold mb-3">Badak R-One Gym in Indramayu</h1>
+      <p class="lead fst-italic">Max out your bench, squat, and deadlift in our gym</p>
+      <a href="/membership" class="btn btn-danger btn-lg rounded-pill mt-3 shadow">Join Our Membership Now!</a>
   </div>
 </section>
 @endsection

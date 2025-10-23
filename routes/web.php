@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/', function () {
-    return view('home');
-}); 
+
+Route::get('/', fn() => view('home'));
+Route::get('/gallery', fn() => view('gallery'));
+Route::get('/membership', fn() => view('membership'));
