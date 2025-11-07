@@ -1,23 +1,37 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Semua route web aplikasi kamu.
+| Untuk saat ini, halaman admin belum menggunakan middleware.
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// ==========================
+// 🔹 ROUTE UNTUK PENGUNJUNG
+// ==========================
+
+Route::get('/', fn() => view('home'))->name('home');
+Route::get('/gallery', fn() => view('gallery'))->name('gallery');
+Route::get('/membership', fn() => view('membership'))->name('membership');
+
+
+// ==========================
+// 🔹 ROUTE UNTUK ADMIN
+// ==========================
+Route::prefix('admin')->group(function () {
+    // Dashboard Admin
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    // Halaman Data Member
+    Route::get('/datamember', [AdminController::class, 'datamember'])->name('admin.datamember');
+
+    // Halaman Kelola Gallery
+    Route::get('/kelolagallery', [AdminController::class, 'kelolagallery'])->name('admin.kelolagallery');
 });
-
-
-Route::get('/', fn() => view('home'));
-Route::get('/gallery', fn() => view('gallery'));
-Route::get('/membership', fn() => view('membership'));
