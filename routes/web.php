@@ -17,7 +17,7 @@ use App\Http\Controllers\AdminController;
 // 🔹 ROUTE UNTUK PENGUNJUNG
 // ==========================
 
-Route::get('/', fn() => view('home'))->name('home');
+Route::get('/', fn() => view('main'))->name('main');
 Route::get('/gallery', fn() => view('gallery'))->name('gallery');
 Route::get('/membership', fn() => view('membership'))->name('membership');
 
@@ -37,11 +37,3 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/kelolamember', [AdminController::class, 'kelolamember'])->name('admin.kelolamember');
 });
-<<<<<<< HEAD
-=======
-
-
-route::get('/', function () {
-    return view('main');
-});
->>>>>>> 5d53212accf20c636e4522b2b677617bc7a5e008
