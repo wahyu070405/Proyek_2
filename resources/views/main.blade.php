@@ -58,13 +58,13 @@
   <!-- === MEMBERSHIP=== -->
   <section id="membership" class="py-5 section-dark text-center">
     <div class="container">
-      <h3 class="fw-bold mb-4 text-white">INFORMASI MEMBERSIP</h3>
+      <h3 class="fw-bold mb-4 text-white">INFORMASI MEMBERSHIP</h3>
       <div class="row g-4 justify-content-center">
         <div class="col-md-3 col-10">
           <div class="package-card blue">
             <h5 class="fw-bold">Paket 1 Bulan</h5>
             <p>Start From</p>
-            <h4>Rp. 100.000/Mont</h4><br>
+            <h4>Rp. 100.000/Month</h4><br>
             <p>Benefit: </p>
             <p>Akses Semua alat di R-One GYM</p>
             <p>Akses Semua alat di R-One GYM</p>
@@ -77,7 +77,7 @@
           <div class="package-card red">
             <h5 class="fw-bold">Paket 3 Bulan</h5>
             <p>Start From</p>
-            <h4>Rp. 270.000/Mont</h4><br>
+            <h4>Rp. 270.000/Month</h4><br>
             <p>Benefit: </p>
             <p>Akses Semua alat di R-One GYM</p>
             <p>Akses Semua alat di R-One GYM</p>
@@ -90,7 +90,7 @@
           <div class="package-card gold">
             <h5 class="fw-bold">Paket 9 Bulan</h5>
             <p>Start From</p>
-            <h4>Rp. 810.000/Mont</h4><br>
+            <h4>Rp. 810.000/Month</h4><br>
             <p>Benefit: </p>
             <p>Akses Semua alat di R-One GYM</p>
             <p>Akses Semua alat di R-One GYM</p>
@@ -107,19 +107,17 @@
   <div class="container">
     <div class="social-icons mb-3">
       <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
       <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
     </div>
 
     <div class="footer-links mb-3">
       <a href="#home" class="mx-3">Home</a>
-      <a href="#about" class="mx-3">Tentang Kami</a>
-      <a href="#menu" class="mx-3">Menu</a>
-      <a href="#contact" class="mx-3">Kontak</a>
+      <a href="#gallery" class="mx-3">Gallery</a>
+      <a href="#membership" class="mx-3">Membersip</a>
     </div>
 
     <p class="m-0">
-      Created by <span class="fw-bold">badakronegym</span> | © 2025.
+      Information <span class="fw-bold">badakronegym</span> | 2025.
     </p>
   </div>
 </footer>
