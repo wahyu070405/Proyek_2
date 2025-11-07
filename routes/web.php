@@ -37,3 +37,11 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/kelolamember', [AdminController::class, 'kelolamember'])->name('admin.kelolamember');
 });
+<<<<<<< HEAD
+=======
+
+
+route::get('/', function () {
+    return view('main');
+});
+>>>>>>> 5d53212accf20c636e4522b2b677617bc7a5e008

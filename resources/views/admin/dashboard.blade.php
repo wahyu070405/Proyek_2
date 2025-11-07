@@ -3,8 +3,6 @@
 @section('content')
 <div class="container-fluid">
     <h1 class="mb-4">Dashboard Admin</h1>
-    <p>Selamat datang di panel admin.</p>
-
     <div class="row g-4 mt-4">
         <!-- Kelola Member -->
         <div class="col-md-4">
