@@ -13,18 +13,16 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-// ==========================
 // 🔹 ROUTE UNTUK PENGUNJUNG
-// ==========================
 
-Route::get('/', fn() => view('main'))->name('main');
+route::get('/', function () {
+    return view('main');
+});
 Route::get('/gallery', fn() => view('gallery'))->name('gallery');
 Route::get('/membership', fn() => view('membership'))->name('membership');
 
 
-// ==========================
 // 🔹 ROUTE UNTUK ADMIN
-// ==========================
 Route::prefix('admin')->group(function () {
     // Dashboard Admin
     Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
