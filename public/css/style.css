@@ -1,154 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: url('../img/backround.png') center/cover fixed no-repeat;
+}
+
 /* === NAVBAR === */
 .custom-navbar {
-  background: transparent
-  backdrop-filter: blur(6px);
-  padding: 12px 0;
+  background: transparent;
+  transition: all 0.4s ease;
+  z-index: 1000;
 }
-
-.custom-navbar .nav-link {
+.custom-navbar.scrolled {
+  /* efek blur kaca */
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.navbar-nav .nav-link {
   color: white !important;
-  font-weight: 500;
-  margin: 0 8px;
-  transition: 0.3s;
+  margin: 0 12px;
+  transition: color 0.3s ease;
 }
-
-.custom-navbar .nav-link:hover {
+.navbar-nav .nav-link:hover {
   color: #ff5252 !important;
-}
-
-.brand-text {
-  font-family: 'Georgia', serif;
-  font-size: 18px;
 }
 
 /* === HERO SECTION === */
 .hero-section {
   position: relative;
   height: 100vh;
-  background: url('../img/backround.png') no-repeat center center/cover;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-
-.hero-section .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.hero-section .content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 0 15px;
-}
-
-.hero-section h1 {
-  font-size: 2.5rem;
-}
-
-.hero-section p {
-  font-size: 1.1rem;
-}
-
-/* === GALLERY === */
-.gallery-section {
-  background: url('../img/backround.png') no-repeat center center/cover;
-  background-attachment: fixed;
-  position: relative;
-}
-
-.gallery-section::before {
+.hero-section::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
-
-.gallery-section .gallery-item {
+.hero-section .container {
   position: relative;
-  overflow: hidden;
-  border-radius: 10px;
   z-index: 2;
 }
-
-.gallery-section img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.4s;
+.hero-section h2 {
+  font-size: 36px;
+}
+.hero-section p {
+  font-size: 16px;
+  opacity: 0.9;
 }
 
-.gallery-section img:hover {
+/* === DARK SECTION === */
+.section-dark {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* === GALLERY === */
+.gallery-box img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery-box img:hover {
   transform: scale(1.05);
 }
 
-/* === MEMBERSHIP SECTION === */
-.membership-section {
-  position: relative;
-  min-height: 100vh;
-  background: url('../img/backround.png') no-repeat center center/cover;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.membership-section .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
-}
-
-.membership-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Card efek hover */
-.price-card {
+/* === PACKAGE CARDS === */
+.package-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
   border-radius: 15px;
-  transition: transform 0.3s ease-in-out;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+.package-card.blue { background: rgba(0, 70, 140, 0.6); }
+.package-card.red { background: rgba(140, 0, 0, 0.6); }
+.package-card.gold { background: rgba(140, 100, 0, 0.6); }
+
+/* === FOOTER === */
+.footer {
+  background: rgba(0, 0, 0, 0.55); /* transparan coklat hitam*/
+  color: #fff;
 }
 
-.price-card:hover {
-  transform: translateY(-5px);
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
 }
 
-/* Responsif */
+.footer a:hover {
+  color: #000;
+}
+
+.footer .social-icons a {
+  font-size: 1.5rem;
+}
+
+.footer .fw-bold {
+  color: #000;
+}
+
+/* Responsif di HP */
 @media (max-width: 768px) {
-  .membership-section {
-    padding: 3rem 1rem;
-    background-attachment: scroll;
+  .footer-links a {
+    display: block;
+    margin: 8px 0;
   }
 }
-
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-  }
-
-  .navbar-brand img {
-    width: 45px;
-  }
-
-  .gallery-section img {
-    height: 200px;
-  }
-
-  .price-card h2 {
-    font-size: 1.5rem;
-  }
+  .hero-section h2 { font-size: 22px; }
+  .hero-section p { font-size: 14px; }
+  .package-card { margin-bottom: 20px; }
 }

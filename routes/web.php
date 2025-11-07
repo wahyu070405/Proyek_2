@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', fn() => view('home'));
-Route::get('/gallery', fn() => view('gallery'));
-Route::get('/membership', fn() => view('membership'));
+route::get('/', function () {
+    return view('main');
+});
