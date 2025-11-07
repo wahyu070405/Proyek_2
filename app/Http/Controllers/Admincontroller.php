@@ -23,4 +23,9 @@ class AdminController extends Controller
     {
         return view('admin.kelolagallery');
     }
+    
+        public function kelolamember()
+    {
+        return view('admin.kelolamember');
+    }
 }

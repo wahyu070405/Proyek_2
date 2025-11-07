@@ -34,4 +34,6 @@ Route::prefix('admin')->group(function () {
 
     // Halaman Kelola Gallery
     Route::get('/kelolagallery', [AdminController::class, 'kelolagallery'])->name('admin.kelolagallery');
+
+    Route::get('/kelolamember', [AdminController::class, 'kelolamember'])->name('admin.kelolamember');
 });
